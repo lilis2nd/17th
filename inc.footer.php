@@ -5,7 +5,7 @@
  */
 
 include('.dbconn.php');
-
+include_once("inc.google.php");
 ?>
 
 <footer class="page-footer grey darken-3">
@@ -23,7 +23,7 @@ include('.dbconn.php');
                     href="http://twitter.com/LILIS_net" target="_blank">Twitter</a> &nbsp; <a
                     class="grey-text text-lighten-3 waves-effect waves-light btn blue"
                     href="https://www.instagram.com/lilis/" target="_blank">Instagram</a>
-                <p class="white-text">Total:</p>
+                <p class="white-text">Total: <span style="font-family: monospace;"><?php include('inc.counter.php'); ?></span></p>
             </div>
         </div>
     </div>
