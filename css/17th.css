@@ -11,6 +11,16 @@ body {
     flex-direction: column;
 }
 
+nav .brand-logo {
+    margin-left: 1em;
+}
+
+@media only screen and (min-width: 0) {
+    .button-collapse {
+        margin-left: 1em;
+    }
+}
+
 main {
     flex: 1 0 auto;
 }
@@ -25,12 +35,5 @@ footer .btn {
     line-height: 5px !important;
     padding: 0.5em !important;
 }
-
-.temp {
-    margin-top: 2em;
-}
-
-a:hover.link-nochange {
-    text-decoration: none;
 
 

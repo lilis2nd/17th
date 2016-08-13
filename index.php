@@ -6,7 +6,7 @@
  * Time: 오후 9:57
  */
 
-include('functions.php');
+include('inc.functions.php');
 
 ?>
 <!DOCTYPE html>
