@@ -22,7 +22,7 @@ include('inc.header.php');
                             <dt>Birth</dt>
                             <dd>1982. 4. 12 (<?php age(); ?>)</dd>
                             <dt>Lives</dt>
-                            <dd>Seoul, South Korea (<a class="modal-trigger" href="#modal_map">Map</a>)</dd>
+                            <dd>Seoul, Republic of Korea (<a class="modal-trigger" href="#modal_map">Map</a>)</dd>
                             <dt>Job</dt>
                             <dd>Technical Writer / Project Manager / Quality Manager</dd>
                             <dt>Hobby</dt>
