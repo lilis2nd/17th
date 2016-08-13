@@ -4,7 +4,6 @@
  * User: lilis
  */
 
-include('.dbconn.php');
 include_once("inc.google.php");
 ?>
 

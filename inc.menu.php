@@ -15,7 +15,7 @@
                 class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li class="active"><a href="./">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="about.php">About</a></li>
                 <li><a href="#">Talks</a></li>
                 <li><a class="dropdown-button" href="#" data-activates="dropPhotos">Photos<i
                             class="material-icons right">arrow_drop_down</i></a></li>
@@ -26,7 +26,7 @@
             </ul>
             <ul class="side-nav" id="mobile">
                 <li class="active"><a href="./">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="about.php">About</a></li>
                 <li><a href="#">Talks</a></li>
                 <li class="divider"></li>
                 <li><a href="#">Snapshots</a></li>
