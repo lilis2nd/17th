@@ -10,3 +10,8 @@ function copyright() {
     $currentYear = date("Y");
     print "2001&ndash;$currentYear";
 }
+
+function age() {
+    $currentYear = date("Y");
+    print $currentYear - 1982 +1;
+}

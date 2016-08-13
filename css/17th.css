@@ -1,4 +1,5 @@
 /*@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800italic,800,300,300italic);*/
+/*noinspection CssUnknownTarget*/
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 html {
@@ -11,6 +12,9 @@ body {
     flex-direction: column;
 }
 
+.container {width: 80% !important;}
+.card-title {font-weight: 400 !important;}
+
 nav .brand-logo {
     margin-left: 1em;
 }
@@ -20,6 +24,7 @@ nav .brand-logo {
         margin-left: 1em;
     }
 }
+
 
 main {
     flex: 1 0 auto;
@@ -35,5 +40,3 @@ footer .btn {
     line-height: 5px !important;
     padding: 0.5em !important;
 }
-
-

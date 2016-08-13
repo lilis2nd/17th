@@ -27,7 +27,8 @@
         $(document).ready(function () {
             $(".dropdown-button").dropdown();
             $(".button-collapse").sideNav();
-        })
+            $('.modal-trigger').leanModal();
+        });
     </script>
 </head>
 
