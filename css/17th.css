@@ -40,3 +40,10 @@ footer .btn {
     line-height: 5px !important;
     padding: 0.5em !important;
 }
+
+ul#talksList {
+    height: 50vh;
+    /*max-height:100%;*/
+    overflow: hidden;
+    overflow-y: auto;
+}

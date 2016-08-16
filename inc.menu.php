@@ -12,7 +12,7 @@
         </ul>
         <nav class="blue-grey darken-2">
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">Skyremix Studio</a> <a href="#" data-activates="mobile"
+                <a href="index.real.php" class="brand-logo">Skyremix Studio</a> <a href="index.real.php" data-activates="mobile"
                     class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li class="active"><a href="index.real.php">Home</a></li>
