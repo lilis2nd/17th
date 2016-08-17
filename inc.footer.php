@@ -28,8 +28,8 @@ include_once("inc.google.php");
     </div>
     <div class="footer-copyright grey darken-1">
         <div class="container">
-            <div class="col l12 m4 s3">
-                Copyright &copy; <?php copyright(); ?>, All rights reserved. <a class="grey-text text-lighten-4 right"
+            <div class="col l12 m4 s3 center-align">
+                Copyright &copy; <?php copyright(); ?>, All rights reserved. <a class="grey-text text-lighten-4"
                     href="http://lilis.net">Skyremix Studio</a>
             </div>
         </div>

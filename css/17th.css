@@ -41,7 +41,7 @@ footer .btn {
 }
 
 ul#talksList {
-    height: 50vh;
+    height: 25vh;
     /*max-height:100%;*/
     overflow: hidden;
     overflow-y: auto;
@@ -49,4 +49,11 @@ ul#talksList {
 
 ul#talksList a {
     color: #00235a;
+}
+
+.card-content ul {
+    padding: 0 0 0 2em;
+}
+.card-content ul li {
+    list-style-type: disc;
 }

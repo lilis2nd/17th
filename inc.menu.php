@@ -12,7 +12,7 @@ $menu_talk_recent_exp = explode('/',$menu_talk_recent_full);
 $menu_talk_recent_name = basename($menu_talk_recent_exp[1],'.php');
 ?>
 <header>
-    <div class="navbar-fixed">
+    <div class="">
         <ul id="dropPhotos" class="dropdown-content">
             <li><a href="#!">Snapshots</a></li>
             <li><a href="#!">Projects</a></li>
