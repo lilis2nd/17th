@@ -15,11 +15,20 @@ define('TALKDIR', 'talks/');
 					$files = glob(TALKDIR . '*.php');
 					arsort($files);
 					$count_page = count($files);
+
+
 					if (!isset($_REQUEST['date'])) {
 						$date = basename($files[$count_page - 1], '.php');
 					} else {
 						$date = $_REQUEST['date'];
 					}
+
+					$temp = new DateTime($date);
+					$tempDate = $temp->format('Ymd');
+					$currentInt = array_search(TALKDIR . $tempDate . '.php', $files);
+					$nextURL = "talks.php?date=" . basename($files[($currentInt - 1)], '.php');
+					$prevURL = "talks.php?date=" . basename($files[($currentInt + 1)], '.php');
+
 					$recent_date = basename($files[$count_page - 1], '.php');
 					if (!isset($date)) {
 //						include(TALKDIR . "$recent_date.php");
@@ -33,21 +42,19 @@ define('TALKDIR', 'talks/');
 				</div>
 				<div class="row">
 					<?php
-					$temp = new DateTime($date);
-					$tempDate = $temp->format('Ymd');
-					$currentInt = array_search(TALKDIR . $tempDate . '.php', $files);
-					$nextURL = "talks.php?date=" . basename($files[($currentInt - 1)], '.php');
-					$prevURL = "talks.php?date=" . basename($files[($currentInt + 1)], '.php');
 
-					if ($currentInt == ($count_page - 1)) {
-						echo "<p class=\"center-align\"><a href=\"$nextURL\">이후<i class=\"material-icons tiny\">fast_forward</i></a></p>";
-					} elseif ($currentInt == 0) {
-						echo "<p class=\"center-align\"><a href=\"$prevURL\"><i class=\"material-icons tiny\">fast_rewind</i>이전</a></p>";
-					} else {
-						print "<p class=\"center-align\"><a href=\"$prevURL\"><i class=\"material-icons tiny\">fast_rewind</i>이전</a>";
-						print "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-						print "<a href=\"$nextURL\">이후<i class=\"material-icons tiny\">fast_forward</i></a></p>";
-					}
+
+					echo "<ul class=\"pagination center-align\">\r\n";
+						if ($currentInt == ($count_page -1)) {
+							echo "<li class=\"waves-effect\"><a href=\"$nextURL\"><i class=\"material-icons\">chevron_right</i></a></li>";
+						} elseif ($currentInt == 0) {
+							echo "<li class=\"waves-effect\"><a href=\"$prevURL\"><i class=\"material-icons\">chevron_left</i></a></li>";
+						} else {
+							print "<li class=\"waves-effect\"><a href=\"$prevURL\"><i class=\"material-icons\">chevron_left</i></a></li>";
+							print "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+							print "<li class=\"waves-effect\"><a href=\"$nextURL\"><i class=\"material-icons\">chevron_right</i></a></li>";
+						}
+						echo "</ul>\r\n";
 					?>
 				</div>
 				<div class="row">
@@ -59,23 +66,6 @@ define('TALKDIR', 'talks/');
 						$page_last = basename($page_last_exp[1],".php");
 						$page_current_exp = explode("=",$_SERVER['QUERY_STRING']);
 						$page_current = $page_current_exp[1];
-
-						echo "<ul class=\"pagination\">\r\n";
-						if ($currentInt == ($count_page -1)) {
-							echo "<li class=\"waves-effect\"><a href=\"$nextURL\"><i class=\"material-icons\">chevron_right</i></a></li>";
-						} elseif ($currentInt == 0) {
-							echo "<li class=\"waves-effect\"><a href=\"$prevURL\"><i class=\"material-icons\">chevron_left</i></a></li>";
-						}
-						echo "</ul>\r\n";
-						/*echo "<ul class=\"pagination\">\r\n";
-
-						echo "<a href=\"talks.php?page=$page_first\">1</a>";
-						echo "&nbsp;";
-						echo "<a href=\"talks.php?page=$page_current\">$currentInt</a>";
-						echo "&nbsp;";
-						echo "<a href=\"talks.php?page=$page_last\">$count_page</a>";
-						echo "</ul>\r\n";*/
-
 
 						$test = array_search(TALKDIR . "$date.php", $files);
 //						var_dump($test);
