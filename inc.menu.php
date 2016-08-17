@@ -3,6 +3,13 @@
  * Created by PhpStorm.
  * User: lilis
  */
+// Talks 메뉴 page 설정
+$menu_talk_files = glob('talks/*.php');
+arsort($menu_talk_files);
+$menu_talk_count = count($menu_talk_files);
+$menu_talk_recent_full = $menu_talk_files[$menu_talk_count-1];
+$menu_talk_recent_exp = explode('/',$menu_talk_recent_full);
+$menu_talk_recent_name = basename($menu_talk_recent_exp[1],'.php');
 ?>
 <header>
     <div class="navbar-fixed">
@@ -17,7 +24,7 @@
                 <ul class="right hide-on-med-and-down">
                     <li class="active"><a href="index.real.php">Home</a></li>
                     <li><a href="about.php">About</a></li>
-                    <li><a href="talks.php">Talks</a></li>
+                    <li><a href="talks.php?page=<?php echo $menu_talk_recent_name; ?>">Talks</a></li>
                     <li><a class="dropdown-button" href="#" data-activates="dropPhotos">Photos<i
                                 class="material-icons right">arrow_drop_down</i></a></li>
                     <li><a href="#">Videos</a></li>
@@ -28,7 +35,7 @@
                 <ul class="side-nav" id="mobile">
                     <li class="active"><a href="index.real.php">Home</a></li>
                     <li><a href="about.php">About</a></li>
-                    <li><a href="talks.php">Talks</a></li>
+                    <li><a href="talks.php?page=<?php echo $menu_talk_recent_name; ?>">Talks</a></li>
                     <li class="divider"></li>
                     <li><a href="#">Snapshots</a></li>
                     <li><a href="#">Projects</a></li>
