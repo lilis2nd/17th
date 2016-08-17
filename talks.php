@@ -22,9 +22,11 @@ define('TALKDIR', 'talks/');
 					}
 					$recent_date = basename($files[$count_page - 1], '.php');
 					if (!isset($date)) {
-						include(TALKDIR . "$recent_date.php");
+//						include(TALKDIR . "$recent_date.php");
+						talkInc(TALKDIR."$recent_date.php");
 					} else {
-						include(TALKDIR . "$date.php");
+//						include(TALKDIR . "$date.php");
+						talkInc(TALKDIR . "$date.php");
 					}
 
 					?>
@@ -40,7 +42,7 @@ define('TALKDIR', 'talks/');
 					if ($currentInt == ($count_page - 1)) {
 						echo "<p class=\"center-align\"><a href=\"$nextURL\">이후<i class=\"material-icons tiny\">fast_forward</i></a></p>";
 					} elseif ($currentInt == 0) {
-						echo "<p class=\"center-align\"><a href=\"$prevURL\">이전<i class=\"material-icons tiny\">fast_rewind</i></a></p>";
+						echo "<p class=\"center-align\"><a href=\"$prevURL\"><i class=\"material-icons tiny\">fast_rewind</i>이전</a></p>";
 					} else {
 						print "<p class=\"center-align\"><a href=\"$prevURL\"><i class=\"material-icons tiny\">fast_rewind</i>이전</a>";
 						print "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";

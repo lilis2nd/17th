@@ -15,3 +15,19 @@ function age() {
     $currentYear = date("Y");
     print $currentYear - 1982 +1;
 }
+
+function talkInc($path) {
+	echo <<<HTML
+<div class="col s12 m12 l12">
+    <div class="card white hoverable">
+        <div class="card-content">
+HTML;
+	include("$path");
+
+	echo <<<HTML
+        </div>
+    </div>
+</div>
+HTML;
+
+}
