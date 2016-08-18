@@ -12,8 +12,13 @@ body {
     flex-direction: column;
 }
 
-.container {width: 80% !important;}
-.card-title {font-weight: 400 !important;}
+.container {
+    width: 80% !important;
+}
+
+.card-title {
+    font-weight: 400 !important;
+}
 
 nav .brand-logo {
     margin-left: 1em;
@@ -42,17 +47,15 @@ footer .btn {
 
 ul#talksList {
     height: 25vh;
-    /*max-height:100%;*/
     overflow: hidden;
     overflow-y: auto;
 }
 
-ul#etcList {
-    height: 25vh;
-    overflow: hidden;
-    overflow-x: hidden;
-    overflow-y: auto;
-    overflow-style: marquee;
+@media only screen and (min-width: 601px) {
+    ul#etcList {
+        height: 25vh;
+        white-space: nowrap;
+    }
 }
 
 ul#talksList a {
@@ -62,6 +65,7 @@ ul#talksList a {
 .card-content ul {
     padding: 0 0 0 2em;
 }
+
 .card-content ul li {
     list-style-type: disc;
 }
