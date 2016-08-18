@@ -47,6 +47,14 @@ ul#talksList {
     overflow-y: auto;
 }
 
+ul#etcList {
+    height: 25vh;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-style: marquee;
+}
+
 ul#talksList a {
     color: #00235a;
 }

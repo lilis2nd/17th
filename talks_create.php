@@ -27,12 +27,19 @@ login('talks_create');
         <div class="row">
             <form class="s12" method="POST" action="talks_done.php">
                 <div class="row">
-                    <div class="input-field col s6">
-                        <input placeholder="Title" id="title" name="title" type="text" class="valid"/>
-                        <label for="title">Title</label>
+                    <div class="input-field col s3">
+                        <select name="Dir" id="Dir">
+                            <option value="talks">Talks</option>
+                            <option value="etc">Etc</option>
+                        </select>
+                        <label>디렉토리 선택</label>
                     </div>
                     <div class="input-field col s6">
-                        <input class="datepicker" type="date" id="date" name="date" placeholder="Date"/>
+                        <input id="title" name="title" type="text" class="valid"/>
+                        <label for="title">Title</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input class="datepicker" type="date" id="date" name="date"/>
                         <label for="date">Date</label>
                     </div>
                 </div>
@@ -46,9 +53,12 @@ login('talks_create');
                 </div>
             </form>
         </div>
-        <?php var_dump($_POST); ?>
     </main>
     <script>
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+
         $('.datepicker').pickadate({
             selectMonths: true, // Creates a dropdown to control month
             selectYears: 15, // Creates a dropdown of 15 years to control year

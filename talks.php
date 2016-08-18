@@ -8,7 +8,7 @@ define('TALKDIR', 'talks/');
 ?>
     <main class="container">
         <div class="row">
-            <div class="col l10 m10 s10">
+            <div class="col l10 m10 s12">
                 <div class="row">
                     <?php
                     // 가장 최근 파일 불러오기
@@ -63,7 +63,7 @@ define('TALKDIR', 'talks/');
                     ?>
                 </div>
             </div>
-            <div class="col l2 m2 s2">
+            <div class="col l2 m2 s12">
                 <div class="row">
                     <p class="center-align">
                         <a class="waves-effect waves-light grey lighten-3 black-text btn modal-trigger" href="#talkAdmin">Admin</a>
