@@ -23,7 +23,7 @@ login('talks_create');
             }
         });
     </script>
-    <main class="container" xmlns="http://www.w3.org/1999/html">
+    <main class="container">
         <div class="row">
             <form class="s12" method="POST" action="talks_done.php">
                 <div class="row">
@@ -35,7 +35,7 @@ login('talks_create');
                         <label>디렉토리 선택</label>
                     </div>
                     <div class="input-field col s6">
-                        <input id="title" name="title" type="text" class="valid"/>
+                        <input id="title" name="title" type="text" class="validate"/>
                         <label for="title">Title</label>
                     </div>
                     <div class="input-field col s3">

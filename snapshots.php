@@ -36,7 +36,7 @@ $foldersCount = count($folders);
 						echo $date_s ."&mdash;".$date_e;
 					}
 					echo "</p>";
-					echo "<span class=\"card-title\">$title</span>";
+					echo "<span class=\"card-title\"><a href=\"snaps_viewer.php?folder=$folderName[1]\">$title <i class=\"material-icons\">linked_camera</i></a></span>";
 					echo "<p><span class=\"new badge red\" data-badge-caption=\"photos\">$count_folderImg</span></p>";
 					echo "</div>";
 					echo "</div>";
@@ -50,6 +50,12 @@ $foldersCount = count($folders);
 				}
 
 				?>
+		</div>
+		<div class="row">
+			<div class="s12 center-align">
+				<a class="btn-floating btn grey" href="media_upload.php">
+					<i class="material-icons">lock</i> </a>
+			</div>
 		</div>
 	</main>
 

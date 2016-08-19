@@ -5,7 +5,7 @@
  */
 include('inc.header.php');
 ?>
-	<main>
+	<main class="container">
 
 	</main>
 
