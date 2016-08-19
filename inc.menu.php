@@ -21,8 +21,8 @@ $menu_etc_recent_name = basename($menu_etc_recent_exp[1], '.php');
 <header>
 	<div class="">
 		<ul id="dropPhotos" class="dropdown-content">
-			<li><a href="#">Snapshots</a></li>
-			<li><a href="#">Projects</a></li>
+			<li><a href="snapshots.php">Snapshots</a></li>
+			<li><a href="projects.php">Projects</a></li>
 		</ul>
 		<nav class="light-blue darken-4">
 			<div class="nav-wrapper">

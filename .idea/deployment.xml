@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="Skylilis" preserveTimestamps="false" uploadOnCheckin="d8b6a04f-d2be-4eda-90d1-abb963b60772" compareModeInSync="TIMESTAMP">
+    <serverData>
+      <paths name="QC">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Skylilis">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/17th" local="$PROJECT_DIR$" web="/17th" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myUploadOnCheckinName" value="Skylilis" />
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
