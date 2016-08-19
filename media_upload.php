@@ -4,6 +4,7 @@
  * User: lilis
  */
 include('inc.header.php');
+login('media_upload');
 ?>
     <main class="container">
         <div class="row">

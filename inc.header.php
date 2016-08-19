@@ -4,6 +4,11 @@
  * User: lilis
  */
 
+ini_set('max_file_uploads', 50);
+ini_set('max_input_time', 120);
+ini_set('memory_limit', '256M');
+ini_set('post_max_size', '50M');
+ini_set('upload_max_filesize', '50M');
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -14,6 +19,7 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="css/17th.css"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>

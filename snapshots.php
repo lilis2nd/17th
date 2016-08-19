@@ -53,8 +53,30 @@ $foldersCount = count($folders);
 		</div>
 		<div class="row">
 			<div class="s12 center-align">
-				<a class="btn-floating btn grey" href="media_upload.php">
+				<a class="btn-floating btn grey modal-trigger" href="#talkAdmin">
 					<i class="material-icons">lock</i> </a>
+			</div>
+		</div>
+		<div id="talkAdmin" class="modal">
+			<div class="modal-content">
+				<form method="POST" action="media_upload.php">
+					<div class="row">
+						<div class="col s12 input-field">
+							<input name="ID" id="ID" type="text" class="valid" autofocus /> <label for="ID">ID</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12 input-field">
+							<input name="PW" id="PW" type="password" class="valid" /> <label for="PW">Password</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="center-align">
+							<button type="submit" name="login" id="login" class="btn waves-effect waves-light">Login
+							</button>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</main>

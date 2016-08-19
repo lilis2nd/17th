@@ -34,8 +34,6 @@ fwrite($file, '$date_e = "' . $date_e . '";');
 fwrite($file, '?>' . "\r\n");
 fclose($file);
 
-//$valid_formats = array("jpg", "png", "gif", "zip", "bmp");
-//$max_file_size = 1024*100; //100 kb
 $path = "$fullDir/"; // Upload directory
 $count = 0;
 
@@ -64,10 +62,6 @@ switch ($dir) {
         <div class="row">
             <div class="s12 center-align">
                 <p>사진 업로드가 완료되었습니다.</p>
-                <pre class="left-align">
-                  <?php var_dump($_POST);
-                  var_dump($_FILES); ?>
-              </pre>
             </div>
         </div>
     </main>
