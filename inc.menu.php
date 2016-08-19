@@ -45,8 +45,8 @@ $menu_etc_recent_name = basename($menu_etc_recent_exp[1], '.php');
 					<li><a href="about.php">About</a></li>
 					<li><a href="talks.php?date=<?php echo $menu_talk_recent_name; ?>">Talks</a></li>
 					<li class="divider"></li>
-					<li><a href="#">Snapshots</a></li>
-					<li><a href="#">Projects</a></li>
+					<li><a href="snapshots.php">Snapshots</a></li>
+					<li><a href="projects.php">Projects</a></li>
 					<li><a href="#">Videos</a></li>
 					<li class="divider"></li>
 					<li><a href="etc.php?page=<?php echo $menu_etc_recent_name; ?>">Etc.</a></li>
