@@ -61,6 +61,11 @@ include('inc.bread.snapshots.php');
         }
         echo "</div>";
         ?>
+        <div class="row">
+            <div class="s12">
+                <?php include("inc.disqus.comment.php"); ?>
+            </div>
+        </div>
     </main>
 
 <?php include('inc.footer.php'); ?>

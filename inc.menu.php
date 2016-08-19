@@ -35,7 +35,7 @@ $menu_etc_recent_name = basename($menu_etc_recent_exp[1], '.php');
 					<li><a href="talks.php?date=<?php echo $menu_talk_recent_name; ?>">Talks</a></li>
 					<li><a class="dropdown-button" href="#" data-activates="dropPhotos">Photos<i
 								class="material-icons right">arrow_drop_down</i></a></li>
-					<li><a href="#">Videos</a></li>
+					<li><a href="video.php">Videos</a></li>
 					<li><a href="etc.php?page=<?php echo $menu_etc_recent_name; ?>">Etc.</a></li>
 					<li><a href="http://lilis.tistory.com/">Blog <span class="new badge"
 								data-badge-caption="old"></span></a></li>
@@ -47,7 +47,7 @@ $menu_etc_recent_name = basename($menu_etc_recent_exp[1], '.php');
 					<li class="divider"></li>
 					<li><a href="snapshots.php">Snapshots</a></li>
 					<li><a href="projects.php">Projects</a></li>
-					<li><a href="#">Videos</a></li>
+					<li><a href="video.php">Videos</a></li>
 					<li class="divider"></li>
 					<li><a href="etc.php?page=<?php echo $menu_etc_recent_name; ?>">Etc.</a></li>
 					<li><a href="http://lilis.tistory.com/">Blog <span class="new badge"
