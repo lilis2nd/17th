@@ -47,8 +47,6 @@ define('TALKDIR', 'talks/');
                 </div>
                 <div class="row">
                     <?php
-
-
                     echo "<ul class=\"pagination center-align\">\r\n";
                     if ($currentInt == ($count_page - 1)) {
                         echo "<li class=\"waves-effect\"><a href=\"$nextURL\"><i class=\"material-icons\">chevron_right</i></a></li>";
@@ -62,12 +60,16 @@ define('TALKDIR', 'talks/');
                     echo "</ul>\r\n";
                     ?>
                 </div>
+                <div class="row">
+					<div class="s12 center-align">
+						<a class="btn-floating btn grey modal-trigger" href="#talkAdmin">
+							<i class="material-icons">lock</i>
+						</a>
+					</div>
+				</div>
             </div>
             <div class="col l2 m2 s12">
                 <div class="row">
-                    <p class="center-align">
-                        <a class="waves-effect waves-light grey lighten-3 black-text btn modal-trigger" href="#talkAdmin">Admin</a>
-                    </p>
                     <p class="center-align">
                         <small>Total pages: <?php echo $count_page; ?></small>
                     </p>
