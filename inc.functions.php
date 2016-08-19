@@ -26,6 +26,8 @@ function talkInc($path)
         <div class="card-content">
 HTML;
     include("$path");
+	echo "<hr />";
+	include("inc.disqus.comment.php");
 
     echo <<<HTML
         </div>

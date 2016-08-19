@@ -42,14 +42,9 @@ define('TALKDIR', 'talks/');
 					} else {
 						talkInc(TALKDIR . "$date.php");
 					}
-					/*if (!isset($date)) {
-						talkInc(TALKDIR . "$recent_date.php");
-					} else {
-						talkInc(TALKDIR . "$date.php");
-					}*/
-
 					?>
 				</div>
+
 				<div class="row">
 					<?php
 					echo "<ul class=\"pagination center-align\">\r\n";

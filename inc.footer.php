@@ -6,7 +6,7 @@
 
 include_once("inc.google.php");
 ?>
-
+<script id="dsq-count-scr" src="//skyremix.disqus.com/count.js" async></script>
 <footer class="page-footer grey darken-3">
     <div class="container">
         <div class="row">
