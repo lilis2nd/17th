@@ -21,8 +21,11 @@ define('ETCDIR', 'etc/');
 						$page = $_REQUEST['page'];
 					}
 
-					talkInc(ETCDIR . "$page.php");
-
+					if (empty($page)) {
+						null;
+					} else {
+						talkInc(ETCDIR . "$page.php");
+					}
 					?>
 				</div>
 				<div class="row">
@@ -31,14 +34,21 @@ define('ETCDIR', 'etc/');
 					$nextURL = "etc.php?page=" . basename($files[$currentInt - 1], '.php');
 					$prevURL = "etc.php?page=" . basename($files[$currentInt + 1], '.php');
 					echo "<ul class=\"pagination center-align\">\r\n";
-					if ($currentInt == ($count_page - 1)) {
-						echo "<li class=\"waves-effect\"><a href=\"$nextURL\"><i class=\"material-icons\">chevron_right</i></a></li>";
-					} elseif ($currentInt == 0) {
-						echo "<li class=\"waves-effect\"><a href=\"$prevURL\"><i class=\"material-icons\">chevron_left</i></a></li>";
+
+					if (empty($page)) {
+						null;
+					} elseif ($count_page == 1) {
+						null;
 					} else {
-						print "<li class=\"waves-effect\"><a href=\"$prevURL\"><i class=\"material-icons\">chevron_left</i></a></li>";
-						print "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-						print "<li class=\"waves-effect\"><a href=\"$nextURL\"><i class=\"material-icons\">chevron_right</i></a></li>";
+						if ($currentInt == ($count_page - 1)) {
+							echo "<li class=\"waves-effect\"><a href=\"$nextURL\"><i class=\"material-icons\">chevron_right</i></a></li>";
+						} elseif ($currentInt == 0) {
+							echo "<li class=\"waves-effect\"><a href=\"$prevURL\"><i class=\"material-icons\">chevron_left</i></a></li>";
+						} else {
+							print "<li class=\"waves-effect\"><a href=\"$prevURL\"><i class=\"material-icons\">chevron_left</i></a></li>";
+							print "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+							print "<li class=\"waves-effect\"><a href=\"$nextURL\"><i class=\"material-icons\">chevron_right</i></a></li>";
+						}
 					}
 					echo "</ul>\r\n";
 					?>

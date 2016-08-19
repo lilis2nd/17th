@@ -1,6 +1,7 @@
 /*@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800italic,800,300,300italic);*/
 /*noinspection CssUnknownTarget*/
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import 'https://fonts.googleapis.com/css?family=Catamaran';
 
 html {
     font-family: 'Noto Sans KR', sans-serif;
@@ -69,3 +70,9 @@ ul#talksList a {
 .card-content ul li {
     list-style-type: disc;
 }
+
+.brand-logo {
+	font-family: 'Catamaran';
+	font-weight:700;
+	font-size:2.5rem;
+};

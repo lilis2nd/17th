@@ -21,15 +21,15 @@ $menu_etc_recent_name = basename($menu_etc_recent_exp[1],'.php');
 <header>
     <div class="">
         <ul id="dropPhotos" class="dropdown-content">
-            <li><a href="#!">Snapshots</a></li>
-            <li><a href="#!">Projects</a></li>
+            <li><a href="#">Snapshots</a></li>
+            <li><a href="#">Projects</a></li>
         </ul>
-        <nav class="blue-grey darken-2">
+        <nav class="light-blue darken-4">
             <div class="nav-wrapper">
                 <a href="index.real.php" class="brand-logo">Skyremix Studio</a> <a href="index.real.php" data-activates="mobile"
                     class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li class="active"><a href="index.real.php">Home</a></li>
+                    <li><a href="index.real.php">Home</a></li>
                     <li><a href="about.php">About</a></li>
                     <li><a href="talks.php?date=<?php echo $menu_talk_recent_name; ?>">Talks</a></li>
                     <li><a class="dropdown-button" href="#" data-activates="dropPhotos">Photos<i
@@ -40,7 +40,7 @@ $menu_etc_recent_name = basename($menu_etc_recent_exp[1],'.php');
                                 data-badge-caption="old"></span></a></li>
                 </ul>
                 <ul class="side-nav" id="mobile">
-                    <li class="active"><a href="index.real.php">Home</a></li>
+                    <li><a href="index.real.php">Home</a></li>
                     <li><a href="about.php">About</a></li>
                     <li><a href="talks.php?date=<?php echo $menu_talk_recent_name; ?>">Talks</a></li>
                     <li class="divider"></li>
@@ -56,3 +56,10 @@ $menu_etc_recent_name = basename($menu_etc_recent_exp[1],'.php');
         </nav>
     </div>
 </header>
+
+<script>
+//    현재 페이지의 nav에 active class 걸기
+    $(function() {
+        $('nav a[href^="' + location.pathname.split("/")[2] + '"]').parent().addClass('active');
+    });
+</script>
