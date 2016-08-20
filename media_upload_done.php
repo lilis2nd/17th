@@ -46,7 +46,7 @@ switch ($dir) {
                     continue; // Skip file if any error found
                 }
                 if ($_FILES['upload']['error'][$f] == 0) {
-                    if (move_uploaded_file($_FILES["upload"]["tmp_name"][$f], $path . $name))
+                    if (move_uploaded_file($_FILES["upload"]["tmp_name"][$f], $path . $count.'_'.$name))
                         $count++; // Number of successfully uploaded file
                 }
             }

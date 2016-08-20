@@ -56,7 +56,7 @@ login('media_upload');
 
         $('.datepicker').pickadate({
             selectMonths: true, // Creates a dropdown to control month
-            selectYears: 15, // Creates a dropdown of 15 years to control year
+            selectYears: 100, // Creates a dropdown of 15 years to control year
             format: 'yyyy/mm/dd',
             labelMonthNext: '다음 달',
             labelMonthPrev: '이전 달',
@@ -69,7 +69,7 @@ login('media_upload');
             weekdaysLetter: ['일', '월', '화', '수', '목', '금', '토'],
             today: '오늘',
             clear: '초기화',
-            close: '닫기'
+            close: '닫기',
         });
     </script>
 

@@ -6,7 +6,7 @@
 include('inc.header.php');
 define('SNAPDIR', 'snapshots/');
 $req = $_REQUEST['folder'];
-$dirList = glob(SNAPDIR . $req . '/*.{png,jpg}', GLOB_BRACE);
+$dirList = glob(SNAPDIR . $req . '/*.{png,jpg,jpeg}', GLOB_BRACE);
 $count_dir = count($dirList);
 include(SNAPDIR . $req . '/description.php');
 if ($date_s == $date_e) {

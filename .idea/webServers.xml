@@ -5,7 +5,7 @@
       <webServer id="d8b6a04f-d2be-4eda-90d1-abb963b60772" name="Skylilis" url="http://lilis.net">
         <fileTransfer host="lilis.net" port="21" rootFolder="/www" password="dfcddfcfdfc4dfc3dfdfdfd9df9bdf9adf9adf9e" username="skylilis">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" />
+            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" />
           </advancedOptions>
           <option name="port" value="21" />
         </fileTransfer>

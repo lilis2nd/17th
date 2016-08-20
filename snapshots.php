@@ -16,7 +16,7 @@ $foldersCount = count($folders);
 				foreach ($folders as $key => $val) {
 					$folderName = explode("/", $val);
 					include $folders[$key]."/description.php";
-					$folderImg = glob(DIR . $folderName[1] . "/*.{png,jpg}", GLOB_BRACE);
+					$folderImg = glob(DIR . $folderName[1] . "/*.{png,jpg,jpeg}", GLOB_BRACE);
 					$count_folderImg = count($folderImg);
 					$rand_Img = $folderImg[rand(0,$count_folderImg-1)];
 
