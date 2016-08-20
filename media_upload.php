@@ -16,12 +16,12 @@ login('media_upload');
                         </select>
                     </div>
                     <div class="input-field col s2">
-                        <input type="date" id="date_s" name="date_s" />
-<!--                        <label for="date_s">시작일</label>-->
+                        <input class="datepicker" type="date" id="date_s" name="date_s" />
+                        <label for="date_s">시작일</label>
                     </div>
                     <div class="input-field col s2">
-                        <input type="date" id="date_e" name="date_e" />
-<!--                        <label for="date_e">종료일</label>-->
+                        <input class="datepicker" type="date" id="date_e" name="date_e" />
+                        <label for="date_e">종료일</label>
                     </div>
                     <div class="input-field col s6">
                         <input type="text" id="title" name="title" class="validate"/>

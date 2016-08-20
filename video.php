@@ -4,14 +4,19 @@
  * User: lilis
  */
 include('inc.header.php');
+include('inc.videos.php');
 ?>
-    <main class="container">
-        <div class="row">
-            <div class="col s12 m6 l3">
-                <iframe src="https://www.youtube.com/embed/Cj06IrPfLyM" frameborder="0"
-                    allowfullscreen></iframe>
-            </div>
-        </div>
-    </main>
+	<main class="container">
+		<div class="row">
+			<?php videoGrid($videoList); ?>
+		</div>
+		<div class="row">
+			<div class="s12 center-align">
+				<a class="btn-floating btn grey modal-trigger" href="#Admin">
+					<i class="material-icons">lock</i> </a>
+			</div>
+		</div>
+		<?php loginForm('video_upload'); ?>
+	</main>
 
 <?php include('inc.footer.php'); ?>
