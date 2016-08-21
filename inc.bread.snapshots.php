@@ -1,5 +1,5 @@
 <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper deep-orange darken-4">
         <div class="col s12">
             <a href="snapshots.php" class="breadcrumb" style="margin-left: 2em;">Snapshots</a>
             <a href="#" class="breadcrumb"><?php echo $title; ?>

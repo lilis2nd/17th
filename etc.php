@@ -63,7 +63,7 @@ define('ETCDIR', 'etc/');
 
 			<div class="col l2 m2 s12">
 				<div class="row">
-					<p>
+					<p class="grey-text">
 						<small>Total: <?php echo $count_page; ?></small>
 					</p>
 					<ul id="etcList">
@@ -71,7 +71,11 @@ define('ETCDIR', 'etc/');
 						for ($i = ($count_page - 1); $i >= 0; $i--) {
 							$exp = explode("/", $files[$i]);
 							$fileName = basename($exp[1], '.php');
-							echo "<li><small><a href=\"etc.php?page=$fileName\">$fileName</a></small></li>";
+							$etcFile = fopen($files[$i], "r");
+							$etcMod = str_replace('<span class="card-title">','',fgets($etcFile));
+							$etcTitle = str_replace('</span>','',$etcMod);
+							fclose($etcFile);
+							echo "<li><small><a href=\"etc.php?page=$fileName\">$etcTitle</a></small></li>";
 						}
 						?>
 					</ul>

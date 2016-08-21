@@ -56,22 +56,22 @@ footer .btn {
 	padding: 0.5em !important;
 }
 
-ul#talksList {
+/*ul#talksList {
 	height: 25vh;
 	overflow: hidden;
 	overflow-y: auto;
-}
+}*/
 
 @media only screen and (min-width: 601px) {
 	ul#etcList {
-		height: 25vh;
+		/*height: 25vh;*/
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
 }
 
-ul#talksList a {
+ul#talksList a, ul#etcList a {
 	color: #00235a;
 }
 
@@ -105,8 +105,8 @@ ul#talksList a {
 	height: 100%;
 }
 
-ul#indexTalk { padding:0;}
-ul#indexTalk li{
+ul#indexTalk, ul#indexEtc { padding:0;}
+ul#indexTalk li, ul#indexEtc li {
 	list-style-type: none;
 }
 
@@ -115,3 +115,5 @@ ul#indexTalk li{
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+
+dt { font-weight:700;}

@@ -24,6 +24,7 @@ function talkInc($path)
 <div class="col s12 m12 l12">
     <div class="card white hoverable">
         <div class="card-content">
+		<!--<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"> </div>-->
 HTML;
 	include("$path");
 	echo "<hr />";

@@ -10,7 +10,7 @@ include('inc.header.php');
             <div class="col s12 m6 l4">
                 <div class="card blue-grey lighten-5 hoverable">
                     <div class="card-content">
-                        <img src="img/profile.jpg" class="responsive-img" />
+                        <img src="img/profile_na.png" class="responsive-img" />
                     </div>
                 </div>
             </div>

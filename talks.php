@@ -42,9 +42,15 @@ define('TALKDIR', 'talks/');
 					} else {
 						talkInc(TALKDIR . "$date.php");
 					}
+
+//					제목 가져오기
+					/*$tFile = fopen(TALKDIR . "$date.php", "r");
+					$tFileMod = str_replace('<span class="card-title">','',fgets($tFile));
+					$title = str_replace('</span>','',$tFileMod);
+					fclose($tFile);*/
+//					var_dump($title);
 					?>
 				</div>
-
 				<div class="row">
 					<?php
 					echo "<ul class=\"pagination center-align\">\r\n";
@@ -76,7 +82,7 @@ define('TALKDIR', 'talks/');
 			</div>
 			<div class="col l2 m2 s12">
 				<div class="row">
-					<p>
+					<p class="grey-text">
 						<small>Total: <?php echo $count_page; ?></small>
 					</p>
 					<ul id="talksList">
