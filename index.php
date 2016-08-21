@@ -2,89 +2,123 @@
 /**
  * Created by PhpStorm.
  * User: lilis
- * Date: 2016. 8. 9.
- * Time: 오후 9:57
  */
+include('inc.header.php');
+define('SNAPSHOTS', 'snapshots/');
+define('TALKS','talks/');
+define('ETC','etc/');
 
-include('inc.functions.php');
+// index photograph - random folder & random img
+$folders = glob(SNAPSHOTS . '*', GLOB_ONLYDIR);
+$foldersCount = count($folders);
+$rand_folder = $folders[rand(0, $foldersCount - 1)];
+$folderPic = glob($rand_folder . '/*.{png,jpg,jpeg}', GLOB_BRACE);
+$folderPicCount = count($folderPic);
+$rand_Img = $folderPic[rand(0, $folderPicCount - 1)];
+$rand_Img_Folder = explode('/',$rand_Img);
+$rand_Img_description = include($rand_Img_Folder[0].'/'.$rand_Img_Folder[1].'/description.php');
+$img = "<a href=\"snaps_viewer.php?folder=$rand_Img_Folder[1]\"><img src=\"$rand_Img\" class=\"responsive-img\"/></a>";
 
+
+// recent talks
+$talks = glob(TALKS.'*');
+$talks = array_reverse($talks);
+$talksCount = count($talks);
+if ($talksCount <5) {
+	$limit = $talksCount;
+} else {
+	$limit = 5;
+}
+
+// recent etc
+$etcs = glob(ETC.'*');
+$etcs = array_reverse($etcs);
+$etcsCount = count($etcs);
+if ($etcsCount <5) {
+	$limitEtc = $etcsCount;
+} else {
+	$limitEtc = 5;
+}
 ?>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="utf-8">
-    <meta name="author" content="LILIS">
-    <title>Skyremix Studio - 17th</title>
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"
-          media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="css/17th.css"/>
+	<main class="container">
+		<div class="row">
+			<div class="col s12 m12 l8 center-align">
+				<div class="card hoverable">
+					<div class="card-panel">
+						<div class="card-content" id="indexPic">
+							<?php echo $img; ?>
+							<p><strong><?php echo $title; ?></strong></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col s6 m6 l4">
+				<div class="card hoverable">
+					<div class="card-panel" style="padding:0">
+						<div class="card-content">
+							<div class="row" style="margin-bottom: 0;">
+								<div class="col s12 center-align blue-grey darken-4 white-text">
+									Talks...
+								</div>
+								<div class="col s12 overflow" style="padding: 0; font-size: 90%">
+									<ul id="indexTalk">
+										<?php
+										for ($i = 0; $i < $limit; $i++) {
+											$talkExp = explode("/", $talks[$i]);
+											$talk = basename($talkExp[1],'.php');
+											$talkDateTemp = new DateTime($talk);
+											$talkDate = $talkDateTemp->format('Y/m/d');
 
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-</head>
+											$talkFile = fopen($talks[$i], "r");
+											$talkMod = str_replace('<span class="card-title">','',fgets($talkFile));
+											$talkTitle = str_replace('</span>','',$talkMod);
+											fclose($talkFile);
+											echo "<li><a href=\"talks.php?date=$talk\"><span class=\"grey-text\">[$talkDate]</span> ".$talkTitle."</a></li>";
+										}
+										?>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col s6 m6 l4">
+				<div class="card hoverable">
+					<div class="card-panel" style="padding: 0">
+						<div class="card-content">
+							<div class="row" style="margin-bottom: 0;">
+								<div class="col s12 center-align blue-grey darken-4 white-text">
+									ETC...
+								</div>
+								<div class="col s12 overflow" style="padding: 0; font-size: 90%">
+									<ul id="indexEtc">
+										<?php
+										for ($i=0; $i < $limitEtc; $i++) {
+											$etcExp = explode("/",$etcs[$i]);
+											$etc = basename($etcExp[1],'.php');
+											$etcFile = fopen($etcs[$i], "r");
+											$etcMod = str_replace('<span class="card-title">','',fgets($etcFile));
+											$etcTitle = str_replace('</span>','',$etcMod);
+											fclose($etcFile);
+											echo "<li><a href=\"etc.php?page=$etc\">".$etcTitle."</a></li>";
+										}
+										?>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<pre>
+				<?php
 
-<body>
-<main>
-    <img src="./img/logo_skyremix_studio.svg" class="responsive-img" alt="Logo image">
-    <div class="container" style="margin-top: 1em;">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="card amber lighten-5">
-                    <div class="card-content">
-                        <span class="card-title"><strong>Under construction</strong></span>
-                        <p>현재 17번째 리뉴얼 중입니다.<br/>
-                            연락은 제 <a href="mailto:lilis@skyremix.com">이메일<i class="tiny material-icons">email</i></a>으로
-                            부탁드립니다.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="progress">
-            <div class="indeterminate"></div>
-        </div>
-    </div>
-</main>
+				?>
+			</pre>
+		</div>
+	</main>
 
-<footer class="page-footer grey darken-3">
-    <div class="container">
-        <div class="row">
-            <div class="col l12 m12 s12">
-                <h5 class="white-text">SNS</h5>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col l12 m4 s3">
-                <a class="grey-text text-lighten-3 waves-effect waves-light btn blue"
-                   href="http://www.facebook.com/lilis.net" target="_blank">Facebook</a>
-                &nbsp;
-                <a class="grey-text text-lighten-3 waves-effect waves-light btn blue"
-                   href="http://twitter.com/LILIS_net"
-                   target="_blank">Twitter</a>
-                &nbsp;
-                <a class="grey-text text-lighten-3 waves-effect waves-light btn blue"
-                   href="https://www.instagram.com/lilis/"
-                   target="_blank">Instagram</a>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright grey darken-1">
-        <div class="container">
-            <div class="col l12 m4 s3">
-                Copyright &copy; <?php copyright(); ?>, All rights reserved. <a class="grey-text text-lighten-4 right"
-                                                                                href="http://lilis.net">Skyremix
-                    Studio</a>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-</body>
-</html>
+<?php include('inc.footer.php'); ?>

@@ -26,11 +26,11 @@ $menu_etc_recent_name = basename($menu_etc_recent_exp[1], '.php');
 		</ul>
 		<nav class="light-blue darken-4">
 			<div class="nav-wrapper">
-				<a href="index.real.php" class="brand-logo">Skyremix Studio</a>
-				<a href="index.real.php" data-activates="mobile"
-					class="button-collapse"><i class="material-icons">menu</i></a>
+				<a href="index.php" class="brand-logo">Skyremix Studio</a>
+				<a href="index.php" data-activates="mobile"
+				   class="button-collapse"><i class="material-icons">menu</i></a>
 				<ul class="right hide-on-med-and-down">
-					<li><a href="index.real.php">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li><a href="about.php">About</a></li>
 					<li><a href="talks.php?date=<?php echo $menu_talk_recent_name; ?>">Talks</a></li>
 					<li><a class="dropdown-button" href="#" data-activates="dropPhotos">Photos<i
@@ -41,7 +41,7 @@ $menu_etc_recent_name = basename($menu_etc_recent_exp[1], '.php');
 								data-badge-caption="old"></span></a></li>
 				</ul>
 				<ul class="side-nav" id="mobile">
-					<li><a href="index.real.php">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li><a href="about.php">About</a></li>
 					<li><a href="talks.php?date=<?php echo $menu_talk_recent_name; ?>">Talks</a></li>
 					<li class="divider"></li>
