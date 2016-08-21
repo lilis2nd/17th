@@ -47,10 +47,10 @@ include('inc.bread.snapshots.php');
                 echo "<div class=\"card-content\">";
                 echo "<ul class=\"left-align\">";
                 echo "<li>Camera: $camera</li>";
+                echo "<li>Focal Length: $focalLength mm</li>";
                 echo "<li>Aperture: F$aperture</li>";
                 echo "<li>Shutter Speed: $shutterSpeed</li>";
                 echo "<li>ISO: $iso</li>";
-                echo "<li>Focal Length: $focalLength mm</li>";
                 echo "</ul>";
                 echo "</div>";
 
