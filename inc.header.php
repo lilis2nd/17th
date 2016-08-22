@@ -21,7 +21,10 @@ ini_set('upload_max_filesize', '50M');
 		<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" media="screen,projection"/>
 		<link type="text/css" rel="stylesheet" href="css/17th.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="canonical" href="http://lilis.net<?php echo $_SERVER['REQUEST_URI']; ?>"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0"/>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 		<script src="../tinymce/tinymce.min.js"></script>
@@ -34,6 +37,7 @@ ini_set('upload_max_filesize', '50M');
 				$('.modal-trigger').leanModal();
 			});
 		</script>
+		<?php include('inc.facebook.php'); ?>
 	</head>
 
 	<body>
